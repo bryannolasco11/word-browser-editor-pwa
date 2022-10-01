@@ -2,7 +2,7 @@ import { Workbox } from 'workbox-window';
 import Editor from './editor';
 import './database';
 import '../css/style.css';
-import { initdb } from './database';
+
 
 // import logo
 import Logo from '../images/logo.png';
