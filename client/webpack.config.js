@@ -25,6 +25,24 @@ module.exports = () => {
       new InjectManifest({
         swSrc: './src-sw.js',
         swDest: 'src-sw.js',
+      }),
+      new WebpackPwaManifest({
+        name: "Word Browser Editor PWA",
+        short_name: 'Jate',
+        description: 'Edit text in the web browser',
+        background_color: '#7eb4e2',
+        theme_color: '#7eb4e2',
+        start_url: '/',
+        publicPath: '/',
+        fingerprints: false,
+        inject: true,
+        icons: [
+          {
+            src: path.resolve('src/images/logo.png'),
+            sizes: [96, 128, 192, 256, 384, 512],
+            destination: path.join('assets', 'icons'),
+          },
+        ],
       })
     ],
 
