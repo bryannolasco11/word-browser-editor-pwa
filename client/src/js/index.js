@@ -8,7 +8,7 @@ import '../css/style.css';
 import Logo from '../images/logo.png';
 
 window.addEventListener('load', function () {
-  initdb();
+  
   document.getElementById('logo').src = Logo;
 })
 
@@ -32,11 +32,17 @@ if (typeof editor === 'undefined') {
   loadSpinner();
 }
 
-// Check if service workers are supported
+// // Check if service workers are supported
+// if ('serviceWorker' in navigator) {
+//   // register workbox service worker
+//   const workboxSW = new Workbox('/src-sw.js');
+//   workboxSW.register();
+// } else {
+//   console.error('Service workers are not supported in this browser.');
+// }
+
+
 if ('serviceWorker' in navigator) {
-  // register workbox service worker
-  const workboxSW = new Workbox('/src-sw.js');
-  workboxSW.register();
-} else {
-  console.error('Service workers are not supported in this browser.');
-}
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./service-worker.js');
+  })};
