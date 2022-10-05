@@ -7,10 +7,10 @@ import '../css/style.css';
 // import logo
 import Logo from '../images/logo.png';
 
-window.addEventListener('load', function () {
+// window.addEventListener('load', function () {
   
-  document.getElementById('logo').src = Logo;
-})
+//   document.getElementById('logo').src = Logo;
+// })
 
 const main = document.querySelector('#main');
 main.innerHTML = '';
@@ -32,7 +32,17 @@ if (typeof editor === 'undefined') {
   loadSpinner();
 }
 
-// // Check if service workers are supported
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./service-worker.js');
+  })};
+
+
+
+
+
+  // // Check if service workers are supported
 // if ('serviceWorker' in navigator) {
 //   // register workbox service worker
 //   const workboxSW = new Workbox('/src-sw.js');
@@ -41,8 +51,3 @@ if (typeof editor === 'undefined') {
 //   console.error('Service workers are not supported in this browser.');
 // }
 
-
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./service-worker.js');
-  })};
