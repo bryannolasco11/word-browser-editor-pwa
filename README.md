@@ -1,9 +1,9 @@
 # word-browser-editor-pwa
 https://github.com/bryannolasco11/word-browser-editor-pwa
 
-https://stark-atoll-69318.herokuapp.com/
+ https://powerful-atoll-97965.herokuapp.com/
 
-![alt.text](./images/TechBlog.png)
+![alt.text](./images/WebTextEditor.png)
 
 ## Table of Contents:
 * [installation](#installation)
@@ -14,11 +14,11 @@ https://stark-atoll-69318.herokuapp.com/
 
 
 ## Usage
-This is a full stack program that utilizes both the front end and the backend of development.  It is a Tech Blog where users can create logins, and post news about Tech.  They are able to also about to comment on posts.  Using a dashboard, a user can see how many posts he has created.
+This is a Web Browser Text Editor which can be downloaded onto a computer.
 
 ## Credits
 https://github.com/bryannolasco11
-Bryan created a program using mysql2, express, express handlebars, bcrypt, express-session, and jest.  Also, Camille Howe was a study partner.
+Bryan created a program using webpacks.  Also, Camille Howe was a study partner.
 
 ## Contributing
 Contributor Covenant Code of Conduct
